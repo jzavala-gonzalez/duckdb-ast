@@ -1,0 +1,25 @@
+{
+  "name": "duckdb-ast",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/duckdb-ast.cjs",
+  "module": "./dist/duckdb-ast.js",
+  "exports": {
+    ".": {
+      "import": "./dist/duckdb-ast.js",
+      "require": "./dist/duckdb-ast.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "vite": "^5.3.4"
+  }
+}
