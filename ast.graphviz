@@ -1,0 +1,73 @@
+digraph G {
+  "BaseModel" "ConfigDict" "RootModel" "Enum"
+
+  "BaseModel" -> "Base"
+  "ConfigDict" -> "Base"
+
+  "BaseModel" -> "Pair"
+  "Generic" -> "Pair"
+
+  "Pair" -> "OrderedDict"
+  "RootModel" -> "OrderedDict"
+  "Generic" -> "OrderedDict"
+  
+  "Base" -> "BaseExpression"
+  "BaseExpression" -> "ParsedExpression"
+
+  "Enum" -> "LogicalTypeId"
+  
+  "Base" -> "CatalogEntry"
+
+  "CatalogEntry" -> "StandardEntry"
+
+  "StandardEntry" -> "TypeCatalogEntry"
+  "LogicalType" -> "TypeCatalogEntry"
+
+  "Base" -> "ExtraTypeInfo"
+  "TypeCatalogEntry" -> "ExtraTypeInfo"
+  "Value" -> "ExtraTypeInfo"
+
+  "ExtraTypeInfo" -> "ListTypeInfo"
+  "LogicalType" -> "ListTypeInfo"
+
+  "ExtraTypeInfo" -> "DecimalTypeInfo"
+  
+  "ExtraTypeInfo" -> "UserTypeInfo"
+  "Value" -> "UserTypeInfo"
+
+  "Base" -> "LogicalType"
+  "LogicalTypeId" -> "LogicalType"
+  "ListTypeInfo" -> "LogicalType"
+  "DecimalTypeInfo" -> "LogicalType"
+  "UserTypeInfo" -> "LogicalType"
+  "StructTypeInfo" -> "LogicalType"
+
+  "BaseModel" -> "FirstSecond"
+  "Generic" -> "FirstSecond"
+  
+  "ExtraTypeInfo" -> "StructTypeInfo"
+  "LogicalType" -> "StructTypeInfo"
+  "FirstSecond" -> "StructTypeInfo"
+
+  "Base" -> "Value"
+  "Generic" -> "Value"
+  "LogicalType" -> "Value"
+ 
+  "ParsedExpression" -> "ColumnRefExpression"
+ 
+  "ParsedExpression" -> "ConstantExpression"
+  "Value" -> "ConstantExpression"
+
+  "ParsedExpression" -> "CastExpression"
+  "ParsedExpressionSubclasses" -> "CastExpression"
+  "LogicalType" -> "CastExpression"
+
+  "ParsedExpression" -> "ComparisonExpression"
+  "ParsedExpressionSubclasses" -> "ComparisonExpression"
+
+  "ParsedExpression" -> "ConjunctionExpression"
+  "ParsedExpressionSubclasses" -> "ConjunctionExpression"
+
+  "Enum" -> "ExpressionType"
+
+}
