@@ -1,0 +1,70 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": []
+        },
+        "select_list": [
+          {
+            "class": "OPERATOR",
+            "type": "OPERATOR_NOT",
+            "alias": "",
+            "query_location": 9,
+            "children": [
+              {
+                "class": "BETWEEN",
+                "type": "COMPARE_BETWEEN",
+                "alias": "",
+                "query_location": 18446744073709551615,
+                "input": {
+                  "class": "COLUMN_REF",
+                  "type": "COLUMN_REF",
+                  "alias": "",
+                  "query_location": 7,
+                  "column_names": [
+                    "a"
+                  ]
+                },
+                "lower": {
+                  "class": "COLUMN_REF",
+                  "type": "COLUMN_REF",
+                  "alias": "",
+                  "query_location": 21,
+                  "column_names": [
+                    "x"
+                  ]
+                },
+                "upper": {
+                  "class": "COLUMN_REF",
+                  "type": "COLUMN_REF",
+                  "alias": "",
+                  "query_location": 27,
+                  "column_names": [
+                    "y"
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "from_table": {
+          "type": "EMPTY",
+          "alias": "",
+          "sample": null,
+          "query_location": 18446744073709551615
+        },
+        "where_clause": null,
+        "group_expressions": [],
+        "group_sets": [],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": null,
+        "sample": null,
+        "qualify": null
+      }
+    }
+  ]
+}

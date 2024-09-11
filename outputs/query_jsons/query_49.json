@@ -1,0 +1,403 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": []
+        },
+        "select_list": [
+          {
+            "class": "FUNCTION",
+            "type": "FUNCTION",
+            "alias": "",
+            "query_location": 23,
+            "function_name": "-",
+            "schema": "",
+            "children": [
+              {
+                "class": "COLUMN_REF",
+                "type": "COLUMN_REF",
+                "alias": "",
+                "query_location": 16,
+                "column_names": [
+                  "amount"
+                ]
+              },
+              {
+                "class": "WINDOW",
+                "type": "WINDOW_LEAD",
+                "alias": "",
+                "query_location": 25,
+                "function_name": "lead",
+                "schema": "",
+                "catalog": "",
+                "children": [
+                  {
+                    "class": "COLUMN_REF",
+                    "type": "COLUMN_REF",
+                    "alias": "",
+                    "query_location": 30,
+                    "column_names": [
+                      "amount"
+                    ]
+                  }
+                ],
+                "partitions": [],
+                "orders": [
+                  {
+                    "type": "ORDER_DEFAULT",
+                    "null_order": "ORDER_DEFAULT",
+                    "expression": {
+                      "class": "COLUMN_REF",
+                      "type": "COLUMN_REF",
+                      "alias": "",
+                      "query_location": 53,
+                      "column_names": [
+                        "time"
+                      ]
+                    }
+                  }
+                ],
+                "start": "UNBOUNDED_PRECEDING",
+                "end": "CURRENT_ROW_RANGE",
+                "start_expr": null,
+                "end_expr": null,
+                "offset_expr": null,
+                "default_expr": null,
+                "ignore_nulls": false,
+                "filter_expr": null,
+                "exclude_clause": "NO_OTHER",
+                "distinct": false
+              }
+            ],
+            "filter": null,
+            "order_bys": {
+              "type": "ORDER_MODIFIER",
+              "orders": []
+            },
+            "distinct": false,
+            "is_operator": true,
+            "export_state": false,
+            "catalog": ""
+          },
+          {
+            "class": "FUNCTION",
+            "type": "FUNCTION",
+            "alias": "",
+            "query_location": 82,
+            "function_name": "-",
+            "schema": "",
+            "children": [
+              {
+                "class": "COLUMN_REF",
+                "type": "COLUMN_REF",
+                "alias": "",
+                "query_location": 75,
+                "column_names": [
+                  "amount"
+                ]
+              },
+              {
+                "class": "WINDOW",
+                "type": "WINDOW_LAG",
+                "alias": "",
+                "query_location": 84,
+                "function_name": "lag",
+                "schema": "",
+                "catalog": "",
+                "children": [
+                  {
+                    "class": "COLUMN_REF",
+                    "type": "COLUMN_REF",
+                    "alias": "",
+                    "query_location": 88,
+                    "column_names": [
+                      "amount"
+                    ]
+                  }
+                ],
+                "partitions": [],
+                "orders": [
+                  {
+                    "type": "ORDER_DEFAULT",
+                    "null_order": "ORDER_DEFAULT",
+                    "expression": {
+                      "class": "COLUMN_REF",
+                      "type": "COLUMN_REF",
+                      "alias": "",
+                      "query_location": 111,
+                      "column_names": [
+                        "time"
+                      ]
+                    }
+                  }
+                ],
+                "start": "UNBOUNDED_PRECEDING",
+                "end": "CURRENT_ROW_RANGE",
+                "start_expr": null,
+                "end_expr": null,
+                "offset_expr": null,
+                "default_expr": null,
+                "ignore_nulls": false,
+                "filter_expr": null,
+                "exclude_clause": "NO_OTHER",
+                "distinct": false
+              }
+            ],
+            "filter": null,
+            "order_bys": {
+              "type": "ORDER_MODIFIER",
+              "orders": []
+            },
+            "distinct": false,
+            "is_operator": true,
+            "export_state": false,
+            "catalog": ""
+          },
+          {
+            "class": "FUNCTION",
+            "type": "FUNCTION",
+            "alias": "",
+            "query_location": 140,
+            "function_name": "/",
+            "schema": "",
+            "children": [
+              {
+                "class": "COLUMN_REF",
+                "type": "COLUMN_REF",
+                "alias": "",
+                "query_location": 133,
+                "column_names": [
+                  "amount"
+                ]
+              },
+              {
+                "class": "WINDOW",
+                "type": "WINDOW_AGGREGATE",
+                "alias": "",
+                "query_location": 142,
+                "function_name": "sum",
+                "schema": "",
+                "catalog": "",
+                "children": [
+                  {
+                    "class": "COLUMN_REF",
+                    "type": "COLUMN_REF",
+                    "alias": "",
+                    "query_location": 146,
+                    "column_names": [
+                      "amount"
+                    ]
+                  }
+                ],
+                "partitions": [
+                  {
+                    "class": "COLUMN_REF",
+                    "type": "COLUMN_REF",
+                    "alias": "",
+                    "query_location": 173,
+                    "column_names": [
+                      "region"
+                    ]
+                  }
+                ],
+                "orders": [],
+                "start": "UNBOUNDED_PRECEDING",
+                "end": "CURRENT_ROW_RANGE",
+                "start_expr": null,
+                "end_expr": null,
+                "offset_expr": null,
+                "default_expr": null,
+                "ignore_nulls": false,
+                "filter_expr": null,
+                "exclude_clause": "NO_OTHER",
+                "distinct": false
+              }
+            ],
+            "filter": null,
+            "order_bys": {
+              "type": "ORDER_MODIFIER",
+              "orders": []
+            },
+            "distinct": false,
+            "is_operator": true,
+            "export_state": false,
+            "catalog": ""
+          },
+          {
+            "class": "WINDOW",
+            "type": "WINDOW_FIRST_VALUE",
+            "alias": "",
+            "query_location": 197,
+            "function_name": "first",
+            "schema": "",
+            "catalog": "",
+            "children": [
+              {
+                "class": "COLUMN_REF",
+                "type": "COLUMN_REF",
+                "alias": "",
+                "query_location": 203,
+                "column_names": [
+                  "employee_name"
+                ]
+              }
+            ],
+            "partitions": [],
+            "orders": [
+              {
+                "type": "DESCENDING",
+                "null_order": "ORDER_DEFAULT",
+                "expression": {
+                  "class": "COLUMN_REF",
+                  "type": "COLUMN_REF",
+                  "alias": "",
+                  "query_location": 233,
+                  "column_names": [
+                    "salary"
+                  ]
+                }
+              }
+            ],
+            "start": "UNBOUNDED_PRECEDING",
+            "end": "CURRENT_ROW_RANGE",
+            "start_expr": null,
+            "end_expr": null,
+            "offset_expr": null,
+            "default_expr": null,
+            "ignore_nulls": false,
+            "filter_expr": null,
+            "exclude_clause": "NO_OTHER",
+            "distinct": false
+          },
+          {
+            "class": "WINDOW",
+            "type": "WINDOW_LAST_VALUE",
+            "alias": "",
+            "query_location": 262,
+            "function_name": "last",
+            "schema": "",
+            "catalog": "",
+            "children": [
+              {
+                "class": "COLUMN_REF",
+                "type": "COLUMN_REF",
+                "alias": "",
+                "query_location": 267,
+                "column_names": [
+                  "employee_name"
+                ]
+              }
+            ],
+            "partitions": [],
+            "orders": [
+              {
+                "type": "DESCENDING",
+                "null_order": "ORDER_DEFAULT",
+                "expression": {
+                  "class": "COLUMN_REF",
+                  "type": "COLUMN_REF",
+                  "alias": "",
+                  "query_location": 298,
+                  "column_names": [
+                    "salary"
+                  ]
+                }
+              }
+            ],
+            "start": "UNBOUNDED_PRECEDING",
+            "end": "CURRENT_ROW_RANGE",
+            "start_expr": null,
+            "end_expr": null,
+            "offset_expr": null,
+            "default_expr": null,
+            "ignore_nulls": false,
+            "filter_expr": null,
+            "exclude_clause": "NO_OTHER",
+            "distinct": false
+          },
+          {
+            "class": "WINDOW",
+            "type": "WINDOW_NTH_VALUE",
+            "alias": "",
+            "query_location": 327,
+            "function_name": "nth_value",
+            "schema": "",
+            "catalog": "",
+            "children": [
+              {
+                "class": "COLUMN_REF",
+                "type": "COLUMN_REF",
+                "alias": "",
+                "query_location": 337,
+                "column_names": [
+                  "employee_name"
+                ]
+              },
+              {
+                "class": "CONSTANT",
+                "type": "VALUE_CONSTANT",
+                "alias": "",
+                "query_location": 352,
+                "value": {
+                  "type": {
+                    "id": "INTEGER",
+                    "type_info": null
+                  },
+                  "is_null": false,
+                  "value": 2
+                }
+              }
+            ],
+            "partitions": [],
+            "orders": [
+              {
+                "type": "DESCENDING",
+                "null_order": "ORDER_DEFAULT",
+                "expression": {
+                  "class": "COLUMN_REF",
+                  "type": "COLUMN_REF",
+                  "alias": "",
+                  "query_location": 370,
+                  "column_names": [
+                    "salary"
+                  ]
+                }
+              }
+            ],
+            "start": "UNBOUNDED_PRECEDING",
+            "end": "CURRENT_ROW_RANGE",
+            "start_expr": null,
+            "end_expr": null,
+            "offset_expr": null,
+            "default_expr": null,
+            "ignore_nulls": false,
+            "filter_expr": null,
+            "exclude_clause": "NO_OTHER",
+            "distinct": false
+          }
+        ],
+        "from_table": {
+          "type": "BASE_TABLE",
+          "alias": "",
+          "sample": null,
+          "query_location": 396,
+          "schema_name": "",
+          "table_name": "basic_pays",
+          "column_name_alias": [],
+          "catalog_name": ""
+        },
+        "where_clause": null,
+        "group_expressions": [],
+        "group_sets": [],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": null,
+        "sample": null,
+        "qualify": null
+      }
+    }
+  ]
+}

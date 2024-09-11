@@ -1,0 +1,149 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": []
+        },
+        "select_list": [
+          {
+            "class": "STAR",
+            "type": "STAR",
+            "alias": "",
+            "query_location": 16,
+            "relation_name": "",
+            "exclude_list": [],
+            "replace_list": [],
+            "columns": false,
+            "expr": null,
+            "unpacked": false
+          }
+        ],
+        "from_table": {
+          "type": "BASE_TABLE",
+          "alias": "grades_parent",
+          "sample": null,
+          "query_location": 31,
+          "schema_name": "",
+          "table_name": "grades",
+          "column_name_alias": [],
+          "catalog_name": ""
+        },
+        "where_clause": {
+          "class": "COMPARISON",
+          "type": "COMPARE_EQUAL",
+          "alias": "",
+          "query_location": 71,
+          "left": {
+            "class": "COLUMN_REF",
+            "type": "COLUMN_REF",
+            "alias": "",
+            "query_location": 66,
+            "column_names": [
+              "grade"
+            ]
+          },
+          "right": {
+            "class": "SUBQUERY",
+            "type": "SUBQUERY",
+            "alias": "",
+            "query_location": 85,
+            "subquery_type": "SCALAR",
+            "subquery": {
+              "node": {
+                "type": "SELECT_NODE",
+                "modifiers": [],
+                "cte_map": {
+                  "map": []
+                },
+                "select_list": [
+                  {
+                    "class": "FUNCTION",
+                    "type": "FUNCTION",
+                    "alias": "",
+                    "query_location": 93,
+                    "function_name": "min",
+                    "schema": "",
+                    "children": [
+                      {
+                        "class": "COLUMN_REF",
+                        "type": "COLUMN_REF",
+                        "alias": "",
+                        "query_location": 97,
+                        "column_names": [
+                          "grade"
+                        ]
+                      }
+                    ],
+                    "filter": null,
+                    "order_bys": {
+                      "type": "ORDER_MODIFIER",
+                      "orders": []
+                    },
+                    "distinct": false,
+                    "is_operator": false,
+                    "export_state": false,
+                    "catalog": ""
+                  }
+                ],
+                "from_table": {
+                  "type": "BASE_TABLE",
+                  "alias": "",
+                  "sample": null,
+                  "query_location": 122,
+                  "schema_name": "",
+                  "table_name": "grades",
+                  "column_name_alias": [],
+                  "catalog_name": ""
+                },
+                "where_clause": {
+                  "class": "COMPARISON",
+                  "type": "COMPARE_EQUAL",
+                  "alias": "",
+                  "query_location": 161,
+                  "left": {
+                    "class": "COLUMN_REF",
+                    "type": "COLUMN_REF",
+                    "alias": "",
+                    "query_location": 148,
+                    "column_names": [
+                      "grades",
+                      "course"
+                    ]
+                  },
+                  "right": {
+                    "class": "COLUMN_REF",
+                    "type": "COLUMN_REF",
+                    "alias": "",
+                    "query_location": 162,
+                    "column_names": [
+                      "grades_parent",
+                      "course"
+                    ]
+                  }
+                },
+                "group_expressions": [],
+                "group_sets": [],
+                "aggregate_handling": "STANDARD_HANDLING",
+                "having": null,
+                "sample": null,
+                "qualify": null
+              }
+            },
+            "child": null,
+            "comparison_type": "INVALID"
+          }
+        },
+        "group_expressions": [],
+        "group_sets": [],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": null,
+        "sample": null,
+        "qualify": null
+      }
+    }
+  ]
+}

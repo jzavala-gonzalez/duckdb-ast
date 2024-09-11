@@ -1,0 +1,111 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": []
+        },
+        "select_list": [
+          {
+            "class": "COLUMN_REF",
+            "type": "COLUMN_REF",
+            "alias": "",
+            "query_location": 16,
+            "column_names": [
+              "city"
+            ]
+          },
+          {
+            "class": "FUNCTION",
+            "type": "FUNCTION",
+            "alias": "",
+            "query_location": 22,
+            "function_name": "count_star",
+            "schema": "",
+            "children": [],
+            "filter": null,
+            "order_bys": {
+              "type": "ORDER_MODIFIER",
+              "orders": []
+            },
+            "distinct": false,
+            "is_operator": false,
+            "export_state": false,
+            "catalog": ""
+          }
+        ],
+        "from_table": {
+          "type": "BASE_TABLE",
+          "alias": "",
+          "sample": null,
+          "query_location": 44,
+          "schema_name": "",
+          "table_name": "addresses",
+          "column_name_alias": [],
+          "catalog_name": ""
+        },
+        "where_clause": null,
+        "group_expressions": [
+          {
+            "class": "COLUMN_REF",
+            "type": "COLUMN_REF",
+            "alias": "",
+            "query_location": 71,
+            "column_names": [
+              "city"
+            ]
+          }
+        ],
+        "group_sets": [
+          [
+            0
+          ]
+        ],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": {
+          "class": "COMPARISON",
+          "type": "COMPARE_GREATERTHANOREQUALTO",
+          "alias": "",
+          "query_location": 100,
+          "left": {
+            "class": "FUNCTION",
+            "type": "FUNCTION",
+            "alias": "",
+            "query_location": 91,
+            "function_name": "count_star",
+            "schema": "",
+            "children": [],
+            "filter": null,
+            "order_bys": {
+              "type": "ORDER_MODIFIER",
+              "orders": []
+            },
+            "distinct": false,
+            "is_operator": false,
+            "export_state": false,
+            "catalog": ""
+          },
+          "right": {
+            "class": "CONSTANT",
+            "type": "VALUE_CONSTANT",
+            "alias": "",
+            "query_location": 103,
+            "value": {
+              "type": {
+                "id": "INTEGER",
+                "type_info": null
+              },
+              "is_null": false,
+              "value": 50
+            }
+          }
+        },
+        "sample": null,
+        "qualify": null
+      }
+    }
+  ]
+}

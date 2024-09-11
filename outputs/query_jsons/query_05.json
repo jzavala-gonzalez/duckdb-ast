@@ -1,0 +1,118 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": []
+        },
+        "select_list": [
+          {
+            "class": "COLUMN_REF",
+            "type": "COLUMN_REF",
+            "alias": "",
+            "query_location": 7,
+            "column_names": [
+              "frog"
+            ]
+          }
+        ],
+        "from_table": {
+          "type": "BASE_TABLE",
+          "alias": "",
+          "sample": null,
+          "query_location": 17,
+          "schema_name": "",
+          "table_name": "frogs",
+          "column_name_alias": [],
+          "catalog_name": ""
+        },
+        "where_clause": {
+          "class": "CONJUNCTION",
+          "type": "CONJUNCTION_AND",
+          "alias": "",
+          "query_location": 40,
+          "children": [
+            {
+              "class": "COMPARISON",
+              "type": "COMPARE_GREATERTHAN",
+              "alias": "",
+              "query_location": 36,
+              "left": {
+                "class": "COLUMN_REF",
+                "type": "COLUMN_REF",
+                "alias": "",
+                "query_location": 29,
+                "column_names": [
+                  "height"
+                ]
+              },
+              "right": {
+                "class": "CONSTANT",
+                "type": "VALUE_CONSTANT",
+                "alias": "",
+                "query_location": 38,
+                "value": {
+                  "type": {
+                    "id": "INTEGER",
+                    "type_info": null
+                  },
+                  "is_null": false,
+                  "value": 5
+                }
+              }
+            },
+            {
+              "class": "COMPARISON",
+              "type": "COMPARE_EQUAL",
+              "alias": "",
+              "query_location": 51,
+              "left": {
+                "class": "COLUMN_REF",
+                "type": "COLUMN_REF",
+                "alias": "",
+                "query_location": 44,
+                "column_names": [
+                  "leader"
+                ]
+              },
+              "right": {
+                "class": "CAST",
+                "type": "OPERATOR_CAST",
+                "alias": "",
+                "query_location": 18446744073709551615,
+                "child": {
+                  "class": "CONSTANT",
+                  "type": "VALUE_CONSTANT",
+                  "alias": "",
+                  "query_location": 53,
+                  "value": {
+                    "type": {
+                      "id": "VARCHAR",
+                      "type_info": null
+                    },
+                    "is_null": false,
+                    "value": "t"
+                  }
+                },
+                "cast_type": {
+                  "id": "BOOLEAN",
+                  "type_info": null
+                },
+                "try_cast": false
+              }
+            }
+          ]
+        },
+        "group_expressions": [],
+        "group_sets": [],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": null,
+        "sample": null,
+        "qualify": null
+      }
+    }
+  ]
+}

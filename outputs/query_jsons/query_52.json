@@ -1,0 +1,40 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": []
+        },
+        "select_list": [
+          {
+            "class": "PARAMETER",
+            "type": "VALUE_PARAMETER",
+            "alias": "",
+            "query_location": 18446744073709551615,
+            "identifier": "hello"
+          }
+        ],
+        "from_table": {
+          "type": "BASE_TABLE",
+          "alias": "",
+          "sample": null,
+          "query_location": 19,
+          "schema_name": "",
+          "table_name": "tbl",
+          "column_name_alias": [],
+          "catalog_name": ""
+        },
+        "where_clause": null,
+        "group_expressions": [],
+        "group_sets": [],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": null,
+        "sample": null,
+        "qualify": null
+      }
+    }
+  ]
+}

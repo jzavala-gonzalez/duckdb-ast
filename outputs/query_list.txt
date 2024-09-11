@@ -1,0 +1,247 @@
+Query #1
+select 1
+
+Query #2
+select * from range(0, 10)
+
+Query #3
+select * from duckdb_tables
+
+Query #4
+select frog from frogs
+
+Query #5
+select frog from frogs where height > 5 and leader = true
+
+Query #6
+select 1 * 1
+
+Query #7
+select frog.age from frogs
+
+Query #8
+select []::boolean[]
+
+Query #9
+select frog.* EXCLUDE age from frogs
+
+Query #10
+
+SELECT *
+EXCLUDE (timestamp_tz)
+REPLACE (varchar.replace(chr(0), chr(10)) AS whatever)
+FROM test_all_types()
+        
+
+Query #11
+select list_apply([1, 2, 3], x => x * 2)
+
+Query #12
+select 0::DECIMAL(15, 6)
+
+Query #13
+select 0::USER_TYPE
+
+Query #14
+select 0::STRUCT(a INT)
+
+Query #15
+select name from frogs GROUP BY age
+
+Query #16
+SELECT * FROM frogs USING SAMPLE 1% (BERNOULLI);
+
+Query #17
+
+        select (select 1) as one
+        
+
+Query #18
+
+        SELECT city, COUNT(*)
+        FROM addresses
+        GROUP BY city
+        HAVING COUNT(*) >= 50;
+        
+
+Query #19
+SELECT 1 < 1, 1 <= 2
+
+Query #20
+SELECT '101010'::BIT
+
+Query #21
+SELECT 0::HUGEINT
+
+Query #22
+SELECT 0::UNION(num INT, str VARCHAR)
+
+Query #23
+SELECT INTERVAL 1 YEAR
+
+Query #24
+SELECT NULL IS NULL
+
+Query #25
+SELECT DATE '1992-09-20'
+
+Query #26
+SELECT TIMESTAMP '1992-09-20 11:30:00'
+
+Query #27
+SELECT TIMESTAMPTZ '1992-09-20 11:30:00'
+
+Query #28
+SELECT i, CASE WHEN i>2 THEN 1 ELSE 0 END AS test FROM integers
+
+Query #29
+SELECT 'hello' COLLATE NOCASE
+
+Query #30
+SELECT 'Math' IN ('CS', 'Math'), X NOT IN ('CS', 'Math')
+
+Query #31
+SELECT a BETWEEN x AND y
+
+Query #32
+SELECT a NOT BETWEEN x AND y
+
+Query #33
+SELECT expression IS NOT NULL
+
+Query #34
+SELECT 2 IS DISTINCT FROM NULL, NULL IS NOT DISTINCT FROM NULL
+
+Query #35
+SELECT 2 < 3, 2 > 3, 2 <= 3, 4 >= NULL, NULL = NULL, 2 <> 2
+
+Query #36
+SELECT EXISTS(SELECT * FROM grades WHERE course='Math');
+
+Query #37
+SELECT 'Math' IN (SELECT course FROM grades);
+
+Query #38
+
+        SELECT *
+        FROM grades grades_parent
+        WHERE grade=
+            (SELECT MIN(grade)
+             FROM grades
+             WHERE grades.course=grades_parent.course);
+        
+
+Query #39
+SELECT MIN(COLUMNS(*)), COUNT(COLUMNS(*)) from numbers;
+
+Query #40
+SELECT a.* FROM (SELECT {'x':1, 'y':2, 'z':3} as a);
+
+Query #41
+
+        WITH ranked_functions as (
+            SELECT
+                schema_name,
+                function_name,
+                row_number() over (partition by schema_name order by function_name) as function_rank
+            FROM duckdb_functions()
+        )
+        SELECT
+            *
+        FROM ranked_functions
+        WHERE
+            function_rank < 3;
+        
+
+Query #42
+
+        WITH RECURSIVE tag_hierarchy(id, source, path) AS (
+  SELECT id, name, [name] AS path
+  FROM tag
+  WHERE subclassof IS NULL
+UNION ALL
+  SELECT tag.id, tag.name, list_prepend(tag.name, tag_hierarchy.path)
+  FROM tag, tag_hierarchy
+  WHERE tag.subclassof = tag_hierarchy.id
+)
+SELECT path
+FROM tag_hierarchy
+WHERE source = 'Oasis';
+        
+
+Query #43
+
+        select
+            thing[0],
+            thing['hello'],
+            thing[1:3],
+            struct_pack(hello := 'world').hello,
+        
+
+Query #44
+
+        SELECT * FROM range(10) t1 UNION ALL SELECT * FROM range(5) t2;
+        
+
+Query #45
+
+        WITH RECURSIVE per_investor_amount AS (
+            SELECT  0 AS investors_number,
+                    0.00 AS investment_amount,
+                    0.00 AS individual_amount
+            UNION
+
+            SELECT  investors_number + 1,
+                    i.investment_amount,
+                    i.investment_amount / (investors_number + 1)
+            FROM investment i, per_investor_amount pia
+            WHERE investors_number << 3
+        )
+
+        SELECT *
+        FROM per_investor_amount
+        ORDER BY  investment_amount, investors_number;
+        
+
+Query #46
+SELECT row_number() OVER () FROM sales;
+
+Query #47
+SELECT row_number() OVER (ORDER BY time) FROM sales;
+
+Query #48
+SELECT row_number() OVER (PARTITION BY region ORDER BY time) FROM sales;
+
+Query #49
+
+        SELECT amount - lead(amount) OVER (ORDER BY time),
+               amount - lag(amount) OVER (ORDER BY time),
+               amount / SUM(amount) OVER (PARTITION BY region),
+               FIRST(employee_name) OVER (ORDER BY salary DESC),
+               LAST(employee_name)  OVER (ORDER BY salary DESC),
+               NTH_VALUE(employee_name, 2) OVER (ORDER BY salary DESC)
+        FROM basic_pays
+        
+
+Query #50
+
+        SELECT Plant, Date,
+    AVG(MWh) OVER (
+        PARTITION BY Plant
+        ORDER BY Date ASC
+        RANGE BETWEEN INTERVAL 3 DAYS PRECEDING
+                  AND INTERVAL 3 DAYS FOLLOWING)
+        AS 'MWh 7-day Moving Average'
+FROM 'Generation History'
+ORDER BY 1, 2
+        
+
+Query #51
+SELECT #1, #2 FROM tbl
+
+Query #52
+SELECT $hello FROM tbl
+
+Query #53
+SELECT list_map(x -> x * 2)
+

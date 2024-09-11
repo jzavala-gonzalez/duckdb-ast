@@ -1,0 +1,152 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SET_OPERATION_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": []
+        },
+        "setop_type": "UNION",
+        "left": {
+          "type": "SELECT_NODE",
+          "modifiers": [],
+          "cte_map": {
+            "map": []
+          },
+          "select_list": [
+            {
+              "class": "STAR",
+              "type": "STAR",
+              "alias": "",
+              "query_location": 16,
+              "relation_name": "",
+              "exclude_list": [],
+              "replace_list": [],
+              "columns": false,
+              "expr": null,
+              "unpacked": false
+            }
+          ],
+          "from_table": {
+            "type": "TABLE_FUNCTION",
+            "alias": "t1",
+            "sample": null,
+            "query_location": 23,
+            "function": {
+              "class": "FUNCTION",
+              "type": "FUNCTION",
+              "alias": "",
+              "query_location": 23,
+              "function_name": "range",
+              "schema": "",
+              "children": [
+                {
+                  "class": "CONSTANT",
+                  "type": "VALUE_CONSTANT",
+                  "alias": "",
+                  "query_location": 29,
+                  "value": {
+                    "type": {
+                      "id": "INTEGER",
+                      "type_info": null
+                    },
+                    "is_null": false,
+                    "value": 10
+                  }
+                }
+              ],
+              "filter": null,
+              "order_bys": {
+                "type": "ORDER_MODIFIER",
+                "orders": []
+              },
+              "distinct": false,
+              "is_operator": false,
+              "export_state": false,
+              "catalog": ""
+            },
+            "column_name_alias": []
+          },
+          "where_clause": null,
+          "group_expressions": [],
+          "group_sets": [],
+          "aggregate_handling": "STANDARD_HANDLING",
+          "having": null,
+          "sample": null,
+          "qualify": null
+        },
+        "right": {
+          "type": "SELECT_NODE",
+          "modifiers": [],
+          "cte_map": {
+            "map": []
+          },
+          "select_list": [
+            {
+              "class": "STAR",
+              "type": "STAR",
+              "alias": "",
+              "query_location": 53,
+              "relation_name": "",
+              "exclude_list": [],
+              "replace_list": [],
+              "columns": false,
+              "expr": null,
+              "unpacked": false
+            }
+          ],
+          "from_table": {
+            "type": "TABLE_FUNCTION",
+            "alias": "t2",
+            "sample": null,
+            "query_location": 60,
+            "function": {
+              "class": "FUNCTION",
+              "type": "FUNCTION",
+              "alias": "",
+              "query_location": 60,
+              "function_name": "range",
+              "schema": "",
+              "children": [
+                {
+                  "class": "CONSTANT",
+                  "type": "VALUE_CONSTANT",
+                  "alias": "",
+                  "query_location": 66,
+                  "value": {
+                    "type": {
+                      "id": "INTEGER",
+                      "type_info": null
+                    },
+                    "is_null": false,
+                    "value": 5
+                  }
+                }
+              ],
+              "filter": null,
+              "order_bys": {
+                "type": "ORDER_MODIFIER",
+                "orders": []
+              },
+              "distinct": false,
+              "is_operator": false,
+              "export_state": false,
+              "catalog": ""
+            },
+            "column_name_alias": []
+          },
+          "where_clause": null,
+          "group_expressions": [],
+          "group_sets": [],
+          "aggregate_handling": "STANDARD_HANDLING",
+          "having": null,
+          "sample": null,
+          "qualify": null
+        },
+        "setop_all": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": []
+        },
+        "select_list": [
+          {
+            "class": "STAR",
+            "type": "STAR",
+            "alias": "",
+            "query_location": 7,
+            "relation_name": "frog",
+            "exclude_list": [
+              "age"
+            ],
+            "replace_list": [],
+            "columns": false,
+            "expr": null,
+            "unpacked": false
+          }
+        ],
+        "from_table": {
+          "type": "BASE_TABLE",
+          "alias": "",
+          "sample": null,
+          "query_location": 31,
+          "schema_name": "",
+          "table_name": "frogs",
+          "column_name_alias": [],
+          "catalog_name": ""
+        },
+        "where_clause": null,
+        "group_expressions": [],
+        "group_sets": [],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": null,
+        "sample": null,
+        "qualify": null
+      }
+    }
+  ]
+}

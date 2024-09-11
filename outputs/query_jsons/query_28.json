@@ -1,0 +1,109 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": []
+        },
+        "select_list": [
+          {
+            "class": "COLUMN_REF",
+            "type": "COLUMN_REF",
+            "alias": "",
+            "query_location": 7,
+            "column_names": [
+              "i"
+            ]
+          },
+          {
+            "class": "CASE",
+            "type": "CASE_EXPR",
+            "alias": "test",
+            "query_location": 10,
+            "case_checks": [
+              {
+                "when_expr": {
+                  "class": "COMPARISON",
+                  "type": "COMPARE_GREATERTHAN",
+                  "alias": "",
+                  "query_location": 21,
+                  "left": {
+                    "class": "COLUMN_REF",
+                    "type": "COLUMN_REF",
+                    "alias": "",
+                    "query_location": 20,
+                    "column_names": [
+                      "i"
+                    ]
+                  },
+                  "right": {
+                    "class": "CONSTANT",
+                    "type": "VALUE_CONSTANT",
+                    "alias": "",
+                    "query_location": 22,
+                    "value": {
+                      "type": {
+                        "id": "INTEGER",
+                        "type_info": null
+                      },
+                      "is_null": false,
+                      "value": 2
+                    }
+                  }
+                },
+                "then_expr": {
+                  "class": "CONSTANT",
+                  "type": "VALUE_CONSTANT",
+                  "alias": "",
+                  "query_location": 29,
+                  "value": {
+                    "type": {
+                      "id": "INTEGER",
+                      "type_info": null
+                    },
+                    "is_null": false,
+                    "value": 1
+                  }
+                }
+              }
+            ],
+            "else_expr": {
+              "class": "CONSTANT",
+              "type": "VALUE_CONSTANT",
+              "alias": "",
+              "query_location": 36,
+              "value": {
+                "type": {
+                  "id": "INTEGER",
+                  "type_info": null
+                },
+                "is_null": false,
+                "value": 0
+              }
+            }
+          }
+        ],
+        "from_table": {
+          "type": "BASE_TABLE",
+          "alias": "",
+          "sample": null,
+          "query_location": 55,
+          "schema_name": "",
+          "table_name": "integers",
+          "column_name_alias": [],
+          "catalog_name": ""
+        },
+        "where_clause": null,
+        "group_expressions": [],
+        "group_sets": [],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": null,
+        "sample": null,
+        "qualify": null
+      }
+    }
+  ]
+}

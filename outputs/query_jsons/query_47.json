@@ -1,0 +1,69 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": []
+        },
+        "select_list": [
+          {
+            "class": "WINDOW",
+            "type": "WINDOW_ROW_NUMBER",
+            "alias": "",
+            "query_location": 7,
+            "function_name": "row_number",
+            "schema": "",
+            "catalog": "",
+            "children": [],
+            "partitions": [],
+            "orders": [
+              {
+                "type": "ORDER_DEFAULT",
+                "null_order": "ORDER_DEFAULT",
+                "expression": {
+                  "class": "COLUMN_REF",
+                  "type": "COLUMN_REF",
+                  "alias": "",
+                  "query_location": 35,
+                  "column_names": [
+                    "time"
+                  ]
+                }
+              }
+            ],
+            "start": "UNBOUNDED_PRECEDING",
+            "end": "CURRENT_ROW_RANGE",
+            "start_expr": null,
+            "end_expr": null,
+            "offset_expr": null,
+            "default_expr": null,
+            "ignore_nulls": false,
+            "filter_expr": null,
+            "exclude_clause": "NO_OTHER",
+            "distinct": false
+          }
+        ],
+        "from_table": {
+          "type": "BASE_TABLE",
+          "alias": "",
+          "sample": null,
+          "query_location": 46,
+          "schema_name": "",
+          "table_name": "sales",
+          "column_name_alias": [],
+          "catalog_name": ""
+        },
+        "where_clause": null,
+        "group_expressions": [],
+        "group_sets": [],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": null,
+        "sample": null,
+        "qualify": null
+      }
+    }
+  ]
+}

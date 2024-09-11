@@ -1,0 +1,57 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": []
+        },
+        "select_list": [
+          {
+            "class": "STAR",
+            "type": "STAR",
+            "alias": "",
+            "query_location": 7,
+            "relation_name": "",
+            "exclude_list": [],
+            "replace_list": [],
+            "columns": false,
+            "expr": null,
+            "unpacked": false
+          }
+        ],
+        "from_table": {
+          "type": "BASE_TABLE",
+          "alias": "",
+          "sample": null,
+          "query_location": 14,
+          "schema_name": "",
+          "table_name": "frogs",
+          "column_name_alias": [],
+          "catalog_name": ""
+        },
+        "where_clause": null,
+        "group_expressions": [],
+        "group_sets": [],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": null,
+        "sample": {
+          "sample_size": {
+            "type": {
+              "id": "DOUBLE",
+              "type_info": null
+            },
+            "is_null": false,
+            "value": 1.0
+          },
+          "is_percentage": true,
+          "method": "Bernoulli",
+          "seed": -1
+        },
+        "qualify": null
+      }
+    }
+  ]
+}

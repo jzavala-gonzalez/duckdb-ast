@@ -1,0 +1,88 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": []
+        },
+        "select_list": [
+          {
+            "class": "SUBQUERY",
+            "type": "SUBQUERY",
+            "alias": "",
+            "query_location": 14,
+            "subquery_type": "ANY",
+            "subquery": {
+              "node": {
+                "type": "SELECT_NODE",
+                "modifiers": [],
+                "cte_map": {
+                  "map": []
+                },
+                "select_list": [
+                  {
+                    "class": "COLUMN_REF",
+                    "type": "COLUMN_REF",
+                    "alias": "",
+                    "query_location": 25,
+                    "column_names": [
+                      "course"
+                    ]
+                  }
+                ],
+                "from_table": {
+                  "type": "BASE_TABLE",
+                  "alias": "",
+                  "sample": null,
+                  "query_location": 37,
+                  "schema_name": "",
+                  "table_name": "grades",
+                  "column_name_alias": [],
+                  "catalog_name": ""
+                },
+                "where_clause": null,
+                "group_expressions": [],
+                "group_sets": [],
+                "aggregate_handling": "STANDARD_HANDLING",
+                "having": null,
+                "sample": null,
+                "qualify": null
+              }
+            },
+            "child": {
+              "class": "CONSTANT",
+              "type": "VALUE_CONSTANT",
+              "alias": "",
+              "query_location": 7,
+              "value": {
+                "type": {
+                  "id": "VARCHAR",
+                  "type_info": null
+                },
+                "is_null": false,
+                "value": "Math"
+              }
+            },
+            "comparison_type": "COMPARE_EQUAL"
+          }
+        ],
+        "from_table": {
+          "type": "EMPTY",
+          "alias": "",
+          "sample": null,
+          "query_location": 18446744073709551615
+        },
+        "where_clause": null,
+        "group_expressions": [],
+        "group_sets": [],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": null,
+        "sample": null,
+        "qualify": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": []
+        },
+        "select_list": [
+          {
+            "class": "FUNCTION",
+            "type": "FUNCTION",
+            "alias": "",
+            "query_location": 7,
+            "function_name": "min",
+            "schema": "",
+            "children": [
+              {
+                "class": "STAR",
+                "type": "STAR",
+                "alias": "",
+                "query_location": 11,
+                "relation_name": "",
+                "exclude_list": [],
+                "replace_list": [],
+                "columns": true,
+                "expr": null,
+                "unpacked": false
+              }
+            ],
+            "filter": null,
+            "order_bys": {
+              "type": "ORDER_MODIFIER",
+              "orders": []
+            },
+            "distinct": false,
+            "is_operator": false,
+            "export_state": false,
+            "catalog": ""
+          },
+          {
+            "class": "FUNCTION",
+            "type": "FUNCTION",
+            "alias": "",
+            "query_location": 24,
+            "function_name": "count",
+            "schema": "",
+            "children": [
+              {
+                "class": "STAR",
+                "type": "STAR",
+                "alias": "",
+                "query_location": 30,
+                "relation_name": "",
+                "exclude_list": [],
+                "replace_list": [],
+                "columns": true,
+                "expr": null,
+                "unpacked": false
+              }
+            ],
+            "filter": null,
+            "order_bys": {
+              "type": "ORDER_MODIFIER",
+              "orders": []
+            },
+            "distinct": false,
+            "is_operator": false,
+            "export_state": false,
+            "catalog": ""
+          }
+        ],
+        "from_table": {
+          "type": "BASE_TABLE",
+          "alias": "",
+          "sample": null,
+          "query_location": 47,
+          "schema_name": "",
+          "table_name": "numbers",
+          "column_name_alias": [],
+          "catalog_name": ""
+        },
+        "where_clause": null,
+        "group_expressions": [],
+        "group_sets": [],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": null,
+        "sample": null,
+        "qualify": null
+      }
+    }
+  ]
+}

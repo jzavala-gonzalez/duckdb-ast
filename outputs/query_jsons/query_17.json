@@ -1,0 +1,76 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": []
+        },
+        "select_list": [
+          {
+            "class": "SUBQUERY",
+            "type": "SUBQUERY",
+            "alias": "one",
+            "query_location": 16,
+            "subquery_type": "SCALAR",
+            "subquery": {
+              "node": {
+                "type": "SELECT_NODE",
+                "modifiers": [],
+                "cte_map": {
+                  "map": []
+                },
+                "select_list": [
+                  {
+                    "class": "CONSTANT",
+                    "type": "VALUE_CONSTANT",
+                    "alias": "",
+                    "query_location": 24,
+                    "value": {
+                      "type": {
+                        "id": "INTEGER",
+                        "type_info": null
+                      },
+                      "is_null": false,
+                      "value": 1
+                    }
+                  }
+                ],
+                "from_table": {
+                  "type": "EMPTY",
+                  "alias": "",
+                  "sample": null,
+                  "query_location": 18446744073709551615
+                },
+                "where_clause": null,
+                "group_expressions": [],
+                "group_sets": [],
+                "aggregate_handling": "STANDARD_HANDLING",
+                "having": null,
+                "sample": null,
+                "qualify": null
+              }
+            },
+            "child": null,
+            "comparison_type": "INVALID"
+          }
+        ],
+        "from_table": {
+          "type": "EMPTY",
+          "alias": "",
+          "sample": null,
+          "query_location": 18446744073709551615
+        },
+        "where_clause": null,
+        "group_expressions": [],
+        "group_sets": [],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": null,
+        "sample": null,
+        "qualify": null
+      }
+    }
+  ]
+}

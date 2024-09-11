@@ -1,0 +1,230 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": []
+        },
+        "select_list": [
+          {
+            "class": "COMPARISON",
+            "type": "COMPARE_LESSTHAN",
+            "alias": "",
+            "query_location": 9,
+            "left": {
+              "class": "CONSTANT",
+              "type": "VALUE_CONSTANT",
+              "alias": "",
+              "query_location": 7,
+              "value": {
+                "type": {
+                  "id": "INTEGER",
+                  "type_info": null
+                },
+                "is_null": false,
+                "value": 2
+              }
+            },
+            "right": {
+              "class": "CONSTANT",
+              "type": "VALUE_CONSTANT",
+              "alias": "",
+              "query_location": 11,
+              "value": {
+                "type": {
+                  "id": "INTEGER",
+                  "type_info": null
+                },
+                "is_null": false,
+                "value": 3
+              }
+            }
+          },
+          {
+            "class": "COMPARISON",
+            "type": "COMPARE_GREATERTHAN",
+            "alias": "",
+            "query_location": 16,
+            "left": {
+              "class": "CONSTANT",
+              "type": "VALUE_CONSTANT",
+              "alias": "",
+              "query_location": 14,
+              "value": {
+                "type": {
+                  "id": "INTEGER",
+                  "type_info": null
+                },
+                "is_null": false,
+                "value": 2
+              }
+            },
+            "right": {
+              "class": "CONSTANT",
+              "type": "VALUE_CONSTANT",
+              "alias": "",
+              "query_location": 18,
+              "value": {
+                "type": {
+                  "id": "INTEGER",
+                  "type_info": null
+                },
+                "is_null": false,
+                "value": 3
+              }
+            }
+          },
+          {
+            "class": "COMPARISON",
+            "type": "COMPARE_LESSTHANOREQUALTO",
+            "alias": "",
+            "query_location": 23,
+            "left": {
+              "class": "CONSTANT",
+              "type": "VALUE_CONSTANT",
+              "alias": "",
+              "query_location": 21,
+              "value": {
+                "type": {
+                  "id": "INTEGER",
+                  "type_info": null
+                },
+                "is_null": false,
+                "value": 2
+              }
+            },
+            "right": {
+              "class": "CONSTANT",
+              "type": "VALUE_CONSTANT",
+              "alias": "",
+              "query_location": 26,
+              "value": {
+                "type": {
+                  "id": "INTEGER",
+                  "type_info": null
+                },
+                "is_null": false,
+                "value": 3
+              }
+            }
+          },
+          {
+            "class": "COMPARISON",
+            "type": "COMPARE_GREATERTHANOREQUALTO",
+            "alias": "",
+            "query_location": 31,
+            "left": {
+              "class": "CONSTANT",
+              "type": "VALUE_CONSTANT",
+              "alias": "",
+              "query_location": 29,
+              "value": {
+                "type": {
+                  "id": "INTEGER",
+                  "type_info": null
+                },
+                "is_null": false,
+                "value": 4
+              }
+            },
+            "right": {
+              "class": "CONSTANT",
+              "type": "VALUE_CONSTANT",
+              "alias": "",
+              "query_location": 34,
+              "value": {
+                "type": {
+                  "id": "NULL",
+                  "type_info": null
+                },
+                "is_null": true
+              }
+            }
+          },
+          {
+            "class": "COMPARISON",
+            "type": "COMPARE_EQUAL",
+            "alias": "",
+            "query_location": 45,
+            "left": {
+              "class": "CONSTANT",
+              "type": "VALUE_CONSTANT",
+              "alias": "",
+              "query_location": 40,
+              "value": {
+                "type": {
+                  "id": "NULL",
+                  "type_info": null
+                },
+                "is_null": true
+              }
+            },
+            "right": {
+              "class": "CONSTANT",
+              "type": "VALUE_CONSTANT",
+              "alias": "",
+              "query_location": 47,
+              "value": {
+                "type": {
+                  "id": "NULL",
+                  "type_info": null
+                },
+                "is_null": true
+              }
+            }
+          },
+          {
+            "class": "COMPARISON",
+            "type": "COMPARE_NOTEQUAL",
+            "alias": "",
+            "query_location": 55,
+            "left": {
+              "class": "CONSTANT",
+              "type": "VALUE_CONSTANT",
+              "alias": "",
+              "query_location": 53,
+              "value": {
+                "type": {
+                  "id": "INTEGER",
+                  "type_info": null
+                },
+                "is_null": false,
+                "value": 2
+              }
+            },
+            "right": {
+              "class": "CONSTANT",
+              "type": "VALUE_CONSTANT",
+              "alias": "",
+              "query_location": 58,
+              "value": {
+                "type": {
+                  "id": "INTEGER",
+                  "type_info": null
+                },
+                "is_null": false,
+                "value": 2
+              }
+            }
+          }
+        ],
+        "from_table": {
+          "type": "EMPTY",
+          "alias": "",
+          "sample": null,
+          "query_location": 18446744073709551615
+        },
+        "where_clause": null,
+        "group_expressions": [],
+        "group_sets": [],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": null,
+        "sample": null,
+        "qualify": null
+      }
+    }
+  ]
+}

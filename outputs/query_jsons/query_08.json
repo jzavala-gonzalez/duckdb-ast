@@ -1,0 +1,66 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": []
+        },
+        "select_list": [
+          {
+            "class": "CAST",
+            "type": "OPERATOR_CAST",
+            "alias": "",
+            "query_location": 9,
+            "child": {
+              "class": "FUNCTION",
+              "type": "FUNCTION",
+              "alias": "",
+              "query_location": 18446744073709551615,
+              "function_name": "list_value",
+              "schema": "main",
+              "children": [],
+              "filter": null,
+              "order_bys": {
+                "type": "ORDER_MODIFIER",
+                "orders": []
+              },
+              "distinct": false,
+              "is_operator": false,
+              "export_state": false,
+              "catalog": ""
+            },
+            "cast_type": {
+              "id": "LIST",
+              "type_info": {
+                "type": "LIST_TYPE_INFO",
+                "alias": "",
+                "modifiers": [],
+                "child_type": {
+                  "id": "BOOLEAN",
+                  "type_info": null
+                }
+              }
+            },
+            "try_cast": false
+          }
+        ],
+        "from_table": {
+          "type": "EMPTY",
+          "alias": "",
+          "sample": null,
+          "query_location": 18446744073709551615
+        },
+        "where_clause": null,
+        "group_expressions": [],
+        "group_sets": [],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": null,
+        "sample": null,
+        "qualify": null
+      }
+    }
+  ]
+}

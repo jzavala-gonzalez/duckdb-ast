@@ -1,0 +1,6 @@
+annotated-types==0.7.0
+duckdb==1.1.0
+duckdb-ast @ git+https://github.com/Mause/duckdb-ast@45c5636333ce090ba3186717d521887fc0979e01
+pydantic==2.9.1
+pydantic_core==2.23.3
+typing_extensions==4.12.2

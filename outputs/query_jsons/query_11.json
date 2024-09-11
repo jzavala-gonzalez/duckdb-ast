@@ -1,0 +1,151 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": []
+        },
+        "select_list": [
+          {
+            "class": "FUNCTION",
+            "type": "FUNCTION",
+            "alias": "",
+            "query_location": 7,
+            "function_name": "list_apply",
+            "schema": "",
+            "children": [
+              {
+                "class": "FUNCTION",
+                "type": "FUNCTION",
+                "alias": "",
+                "query_location": 19,
+                "function_name": "list_value",
+                "schema": "main",
+                "children": [
+                  {
+                    "class": "CONSTANT",
+                    "type": "VALUE_CONSTANT",
+                    "alias": "",
+                    "query_location": 19,
+                    "value": {
+                      "type": {
+                        "id": "INTEGER",
+                        "type_info": null
+                      },
+                      "is_null": false,
+                      "value": 1
+                    }
+                  },
+                  {
+                    "class": "CONSTANT",
+                    "type": "VALUE_CONSTANT",
+                    "alias": "",
+                    "query_location": 22,
+                    "value": {
+                      "type": {
+                        "id": "INTEGER",
+                        "type_info": null
+                      },
+                      "is_null": false,
+                      "value": 2
+                    }
+                  },
+                  {
+                    "class": "CONSTANT",
+                    "type": "VALUE_CONSTANT",
+                    "alias": "",
+                    "query_location": 25,
+                    "value": {
+                      "type": {
+                        "id": "INTEGER",
+                        "type_info": null
+                      },
+                      "is_null": false,
+                      "value": 3
+                    }
+                  }
+                ],
+                "filter": null,
+                "order_bys": {
+                  "type": "ORDER_MODIFIER",
+                  "orders": []
+                },
+                "distinct": false,
+                "is_operator": false,
+                "export_state": false,
+                "catalog": ""
+              },
+              {
+                "class": "FUNCTION",
+                "type": "FUNCTION",
+                "alias": "x",
+                "query_location": 36,
+                "function_name": "*",
+                "schema": "",
+                "children": [
+                  {
+                    "class": "COLUMN_REF",
+                    "type": "COLUMN_REF",
+                    "alias": "",
+                    "query_location": 34,
+                    "column_names": [
+                      "x"
+                    ]
+                  },
+                  {
+                    "class": "CONSTANT",
+                    "type": "VALUE_CONSTANT",
+                    "alias": "",
+                    "query_location": 38,
+                    "value": {
+                      "type": {
+                        "id": "INTEGER",
+                        "type_info": null
+                      },
+                      "is_null": false,
+                      "value": 2
+                    }
+                  }
+                ],
+                "filter": null,
+                "order_bys": {
+                  "type": "ORDER_MODIFIER",
+                  "orders": []
+                },
+                "distinct": false,
+                "is_operator": true,
+                "export_state": false,
+                "catalog": ""
+              }
+            ],
+            "filter": null,
+            "order_bys": {
+              "type": "ORDER_MODIFIER",
+              "orders": []
+            },
+            "distinct": false,
+            "is_operator": false,
+            "export_state": false,
+            "catalog": ""
+          }
+        ],
+        "from_table": {
+          "type": "EMPTY",
+          "alias": "",
+          "sample": null,
+          "query_location": 18446744073709551615
+        },
+        "where_clause": null,
+        "group_expressions": [],
+        "group_sets": [],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": null,
+        "sample": null,
+        "qualify": null
+      }
+    }
+  ]
+}

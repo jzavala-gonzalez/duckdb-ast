@@ -1,0 +1,191 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": []
+        },
+        "select_list": [
+          {
+            "class": "OPERATOR",
+            "type": "ARRAY_EXTRACT",
+            "alias": "",
+            "query_location": 18446744073709551615,
+            "children": [
+              {
+                "class": "COLUMN_REF",
+                "type": "COLUMN_REF",
+                "alias": "",
+                "query_location": 28,
+                "column_names": [
+                  "thing"
+                ]
+              },
+              {
+                "class": "CONSTANT",
+                "type": "VALUE_CONSTANT",
+                "alias": "",
+                "query_location": 34,
+                "value": {
+                  "type": {
+                    "id": "INTEGER",
+                    "type_info": null
+                  },
+                  "is_null": false,
+                  "value": 0
+                }
+              }
+            ]
+          },
+          {
+            "class": "OPERATOR",
+            "type": "ARRAY_EXTRACT",
+            "alias": "",
+            "query_location": 18446744073709551615,
+            "children": [
+              {
+                "class": "COLUMN_REF",
+                "type": "COLUMN_REF",
+                "alias": "",
+                "query_location": 50,
+                "column_names": [
+                  "thing"
+                ]
+              },
+              {
+                "class": "CONSTANT",
+                "type": "VALUE_CONSTANT",
+                "alias": "",
+                "query_location": 56,
+                "value": {
+                  "type": {
+                    "id": "VARCHAR",
+                    "type_info": null
+                  },
+                  "is_null": false,
+                  "value": "hello"
+                }
+              }
+            ]
+          },
+          {
+            "class": "OPERATOR",
+            "type": "ARRAY_SLICE",
+            "alias": "",
+            "query_location": 18446744073709551615,
+            "children": [
+              {
+                "class": "COLUMN_REF",
+                "type": "COLUMN_REF",
+                "alias": "",
+                "query_location": 78,
+                "column_names": [
+                  "thing"
+                ]
+              },
+              {
+                "class": "CONSTANT",
+                "type": "VALUE_CONSTANT",
+                "alias": "",
+                "query_location": 84,
+                "value": {
+                  "type": {
+                    "id": "INTEGER",
+                    "type_info": null
+                  },
+                  "is_null": false,
+                  "value": 1
+                }
+              },
+              {
+                "class": "CONSTANT",
+                "type": "VALUE_CONSTANT",
+                "alias": "",
+                "query_location": 86,
+                "value": {
+                  "type": {
+                    "id": "INTEGER",
+                    "type_info": null
+                  },
+                  "is_null": false,
+                  "value": 3
+                }
+              }
+            ]
+          },
+          {
+            "class": "OPERATOR",
+            "type": "STRUCT_EXTRACT",
+            "alias": "",
+            "query_location": 18446744073709551615,
+            "children": [
+              {
+                "class": "FUNCTION",
+                "type": "FUNCTION",
+                "alias": "",
+                "query_location": 102,
+                "function_name": "struct_pack",
+                "schema": "",
+                "children": [
+                  {
+                    "class": "CONSTANT",
+                    "type": "VALUE_CONSTANT",
+                    "alias": "hello",
+                    "query_location": 123,
+                    "value": {
+                      "type": {
+                        "id": "VARCHAR",
+                        "type_info": null
+                      },
+                      "is_null": false,
+                      "value": "world"
+                    }
+                  }
+                ],
+                "filter": null,
+                "order_bys": {
+                  "type": "ORDER_MODIFIER",
+                  "orders": []
+                },
+                "distinct": false,
+                "is_operator": false,
+                "export_state": false,
+                "catalog": ""
+              },
+              {
+                "class": "CONSTANT",
+                "type": "VALUE_CONSTANT",
+                "alias": "",
+                "query_location": 18446744073709551615,
+                "value": {
+                  "type": {
+                    "id": "VARCHAR",
+                    "type_info": null
+                  },
+                  "is_null": false,
+                  "value": "hello"
+                }
+              }
+            ]
+          }
+        ],
+        "from_table": {
+          "type": "EMPTY",
+          "alias": "",
+          "sample": null,
+          "query_location": 18446744073709551615
+        },
+        "where_clause": null,
+        "group_expressions": [],
+        "group_sets": [],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": null,
+        "sample": null,
+        "qualify": null
+      }
+    }
+  ]
+}

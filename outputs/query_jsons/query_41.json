@@ -1,0 +1,188 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": [
+            {
+              "key": "ranked_functions",
+              "value": {
+                "aliases": [],
+                "query": {
+                  "node": {
+                    "type": "SELECT_NODE",
+                    "modifiers": [],
+                    "cte_map": {
+                      "map": []
+                    },
+                    "select_list": [
+                      {
+                        "class": "COLUMN_REF",
+                        "type": "COLUMN_REF",
+                        "alias": "",
+                        "query_location": 71,
+                        "column_names": [
+                          "schema_name"
+                        ]
+                      },
+                      {
+                        "class": "COLUMN_REF",
+                        "type": "COLUMN_REF",
+                        "alias": "",
+                        "query_location": 100,
+                        "column_names": [
+                          "function_name"
+                        ]
+                      },
+                      {
+                        "class": "WINDOW",
+                        "type": "WINDOW_ROW_NUMBER",
+                        "alias": "function_rank",
+                        "query_location": 131,
+                        "function_name": "row_number",
+                        "schema": "",
+                        "catalog": "",
+                        "children": [],
+                        "partitions": [
+                          {
+                            "class": "COLUMN_REF",
+                            "type": "COLUMN_REF",
+                            "alias": "",
+                            "query_location": 163,
+                            "column_names": [
+                              "schema_name"
+                            ]
+                          }
+                        ],
+                        "orders": [
+                          {
+                            "type": "ORDER_DEFAULT",
+                            "null_order": "ORDER_DEFAULT",
+                            "expression": {
+                              "class": "COLUMN_REF",
+                              "type": "COLUMN_REF",
+                              "alias": "",
+                              "query_location": 184,
+                              "column_names": [
+                                "function_name"
+                              ]
+                            }
+                          }
+                        ],
+                        "start": "UNBOUNDED_PRECEDING",
+                        "end": "CURRENT_ROW_RANGE",
+                        "start_expr": null,
+                        "end_expr": null,
+                        "offset_expr": null,
+                        "default_expr": null,
+                        "ignore_nulls": false,
+                        "filter_expr": null,
+                        "exclude_clause": "NO_OTHER",
+                        "distinct": false
+                      }
+                    ],
+                    "from_table": {
+                      "type": "TABLE_FUNCTION",
+                      "alias": "",
+                      "sample": null,
+                      "query_location": 233,
+                      "function": {
+                        "class": "FUNCTION",
+                        "type": "FUNCTION",
+                        "alias": "",
+                        "query_location": 233,
+                        "function_name": "duckdb_functions",
+                        "schema": "",
+                        "children": [],
+                        "filter": null,
+                        "order_bys": {
+                          "type": "ORDER_MODIFIER",
+                          "orders": []
+                        },
+                        "distinct": false,
+                        "is_operator": false,
+                        "export_state": false,
+                        "catalog": ""
+                      },
+                      "column_name_alias": []
+                    },
+                    "where_clause": null,
+                    "group_expressions": [],
+                    "group_sets": [],
+                    "aggregate_handling": "STANDARD_HANDLING",
+                    "having": null,
+                    "sample": null,
+                    "qualify": null
+                  }
+                },
+                "materialized": "CTE_MATERIALIZE_DEFAULT"
+              }
+            }
+          ]
+        },
+        "select_list": [
+          {
+            "class": "STAR",
+            "type": "STAR",
+            "alias": "",
+            "query_location": 289,
+            "relation_name": "",
+            "exclude_list": [],
+            "replace_list": [],
+            "columns": false,
+            "expr": null,
+            "unpacked": false
+          }
+        ],
+        "from_table": {
+          "type": "BASE_TABLE",
+          "alias": "",
+          "sample": null,
+          "query_location": 304,
+          "schema_name": "",
+          "table_name": "ranked_functions",
+          "column_name_alias": [],
+          "catalog_name": ""
+        },
+        "where_clause": {
+          "class": "COMPARISON",
+          "type": "COMPARE_LESSTHAN",
+          "alias": "",
+          "query_location": 361,
+          "left": {
+            "class": "COLUMN_REF",
+            "type": "COLUMN_REF",
+            "alias": "",
+            "query_location": 347,
+            "column_names": [
+              "function_rank"
+            ]
+          },
+          "right": {
+            "class": "CONSTANT",
+            "type": "VALUE_CONSTANT",
+            "alias": "",
+            "query_location": 363,
+            "value": {
+              "type": {
+                "id": "INTEGER",
+                "type_info": null
+              },
+              "is_null": false,
+              "value": 3
+            }
+          }
+        },
+        "group_expressions": [],
+        "group_sets": [],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": null,
+        "sample": null,
+        "qualify": null
+      }
+    }
+  ]
+}

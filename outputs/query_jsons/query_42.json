@@ -1,0 +1,318 @@
+{
+  "error": false,
+  "statements": [
+    {
+      "node": {
+        "type": "SELECT_NODE",
+        "modifiers": [],
+        "cte_map": {
+          "map": [
+            {
+              "key": "tag_hierarchy",
+              "value": {
+                "aliases": [
+                  "id",
+                  "source",
+                  "path"
+                ],
+                "query": {
+                  "node": {
+                    "type": "RECURSIVE_CTE_NODE",
+                    "modifiers": [],
+                    "cte_map": {
+                      "map": []
+                    },
+                    "cte_name": "tag_hierarchy",
+                    "union_all": true,
+                    "left": {
+                      "type": "SELECT_NODE",
+                      "modifiers": [],
+                      "cte_map": {
+                        "map": []
+                      },
+                      "select_list": [
+                        {
+                          "class": "COLUMN_REF",
+                          "type": "COLUMN_REF",
+                          "alias": "",
+                          "query_location": 70,
+                          "column_names": [
+                            "id"
+                          ]
+                        },
+                        {
+                          "class": "COLUMN_REF",
+                          "type": "COLUMN_REF",
+                          "alias": "",
+                          "query_location": 74,
+                          "column_names": [
+                            "name"
+                          ]
+                        },
+                        {
+                          "class": "FUNCTION",
+                          "type": "FUNCTION",
+                          "alias": "path",
+                          "query_location": 81,
+                          "function_name": "list_value",
+                          "schema": "main",
+                          "children": [
+                            {
+                              "class": "COLUMN_REF",
+                              "type": "COLUMN_REF",
+                              "alias": "",
+                              "query_location": 81,
+                              "column_names": [
+                                "name"
+                              ]
+                            }
+                          ],
+                          "filter": null,
+                          "order_bys": {
+                            "type": "ORDER_MODIFIER",
+                            "orders": []
+                          },
+                          "distinct": false,
+                          "is_operator": false,
+                          "export_state": false,
+                          "catalog": ""
+                        }
+                      ],
+                      "from_table": {
+                        "type": "BASE_TABLE",
+                        "alias": "",
+                        "sample": null,
+                        "query_location": 102,
+                        "schema_name": "",
+                        "table_name": "tag",
+                        "column_name_alias": [],
+                        "catalog_name": ""
+                      },
+                      "where_clause": {
+                        "class": "OPERATOR",
+                        "type": "OPERATOR_IS_NULL",
+                        "alias": "",
+                        "query_location": 125,
+                        "children": [
+                          {
+                            "class": "COLUMN_REF",
+                            "type": "COLUMN_REF",
+                            "alias": "",
+                            "query_location": 114,
+                            "column_names": [
+                              "subclassof"
+                            ]
+                          }
+                        ]
+                      },
+                      "group_expressions": [],
+                      "group_sets": [],
+                      "aggregate_handling": "STANDARD_HANDLING",
+                      "having": null,
+                      "sample": null,
+                      "qualify": null
+                    },
+                    "right": {
+                      "type": "SELECT_NODE",
+                      "modifiers": [],
+                      "cte_map": {
+                        "map": []
+                      },
+                      "select_list": [
+                        {
+                          "class": "COLUMN_REF",
+                          "type": "COLUMN_REF",
+                          "alias": "",
+                          "query_location": 152,
+                          "column_names": [
+                            "tag",
+                            "id"
+                          ]
+                        },
+                        {
+                          "class": "COLUMN_REF",
+                          "type": "COLUMN_REF",
+                          "alias": "",
+                          "query_location": 160,
+                          "column_names": [
+                            "tag",
+                            "name"
+                          ]
+                        },
+                        {
+                          "class": "FUNCTION",
+                          "type": "FUNCTION",
+                          "alias": "",
+                          "query_location": 170,
+                          "function_name": "list_prepend",
+                          "schema": "",
+                          "children": [
+                            {
+                              "class": "COLUMN_REF",
+                              "type": "COLUMN_REF",
+                              "alias": "",
+                              "query_location": 183,
+                              "column_names": [
+                                "tag",
+                                "name"
+                              ]
+                            },
+                            {
+                              "class": "COLUMN_REF",
+                              "type": "COLUMN_REF",
+                              "alias": "",
+                              "query_location": 193,
+                              "column_names": [
+                                "tag_hierarchy",
+                                "path"
+                              ]
+                            }
+                          ],
+                          "filter": null,
+                          "order_bys": {
+                            "type": "ORDER_MODIFIER",
+                            "orders": []
+                          },
+                          "distinct": false,
+                          "is_operator": false,
+                          "export_state": false,
+                          "catalog": ""
+                        }
+                      ],
+                      "from_table": {
+                        "type": "JOIN",
+                        "alias": "",
+                        "sample": null,
+                        "query_location": 18446744073709551615,
+                        "left": {
+                          "type": "BASE_TABLE",
+                          "alias": "",
+                          "sample": null,
+                          "query_location": 220,
+                          "schema_name": "",
+                          "table_name": "tag",
+                          "column_name_alias": [],
+                          "catalog_name": ""
+                        },
+                        "right": {
+                          "type": "BASE_TABLE",
+                          "alias": "",
+                          "sample": null,
+                          "query_location": 225,
+                          "schema_name": "",
+                          "table_name": "tag_hierarchy",
+                          "column_name_alias": [],
+                          "catalog_name": ""
+                        },
+                        "condition": null,
+                        "join_type": "INNER",
+                        "ref_type": "CROSS",
+                        "using_columns": [],
+                        "delim_flipped": false,
+                        "duplicate_eliminated_columns": []
+                      },
+                      "where_clause": {
+                        "class": "COMPARISON",
+                        "type": "COMPARE_EQUAL",
+                        "alias": "",
+                        "query_location": 262,
+                        "left": {
+                          "class": "COLUMN_REF",
+                          "type": "COLUMN_REF",
+                          "alias": "",
+                          "query_location": 247,
+                          "column_names": [
+                            "tag",
+                            "subclassof"
+                          ]
+                        },
+                        "right": {
+                          "class": "COLUMN_REF",
+                          "type": "COLUMN_REF",
+                          "alias": "",
+                          "query_location": 264,
+                          "column_names": [
+                            "tag_hierarchy",
+                            "id"
+                          ]
+                        }
+                      },
+                      "group_expressions": [],
+                      "group_sets": [],
+                      "aggregate_handling": "STANDARD_HANDLING",
+                      "having": null,
+                      "sample": null,
+                      "qualify": null
+                    },
+                    "aliases": [
+                      "id",
+                      "source",
+                      "path"
+                    ]
+                  }
+                },
+                "materialized": "CTE_MATERIALIZE_DEFAULT"
+              }
+            }
+          ]
+        },
+        "select_list": [
+          {
+            "class": "COLUMN_REF",
+            "type": "COLUMN_REF",
+            "alias": "",
+            "query_location": 290,
+            "column_names": [
+              "path"
+            ]
+          }
+        ],
+        "from_table": {
+          "type": "BASE_TABLE",
+          "alias": "",
+          "sample": null,
+          "query_location": 300,
+          "schema_name": "",
+          "table_name": "tag_hierarchy",
+          "column_name_alias": [],
+          "catalog_name": ""
+        },
+        "where_clause": {
+          "class": "COMPARISON",
+          "type": "COMPARE_EQUAL",
+          "alias": "",
+          "query_location": 327,
+          "left": {
+            "class": "COLUMN_REF",
+            "type": "COLUMN_REF",
+            "alias": "",
+            "query_location": 320,
+            "column_names": [
+              "source"
+            ]
+          },
+          "right": {
+            "class": "CONSTANT",
+            "type": "VALUE_CONSTANT",
+            "alias": "",
+            "query_location": 329,
+            "value": {
+              "type": {
+                "id": "VARCHAR",
+                "type_info": null
+              },
+              "is_null": false,
+              "value": "Oasis"
+            }
+          }
+        },
+        "group_expressions": [],
+        "group_sets": [],
+        "aggregate_handling": "STANDARD_HANDLING",
+        "having": null,
+        "sample": null,
+        "qualify": null
+      }
+    }
+  ]
+}
