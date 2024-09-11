@@ -70,4 +70,58 @@ digraph G {
 
   "Enum" -> "ExpressionType"
 
+  "ParsedExpression" -> "OperatorExpression"
+  "ParsedExpressionSubclasses" -> "OperatorExpression"
+
+  "Enum" -> "WindowBoundary"
+
+  "Enum" -> "WindowExcludeMode"
+
+  "ParsedExpression" -> "WindowExpression"
+  "ParsedExpressionSubclasses" -> "WindowExpression"
+  "OrderByNode" -> "WindowExpression"
+  "WindowBoundary" -> "WindowExpression"
+  "WindowExcludeMode" -> "WindowExpression"
+
+  "ParsedExpression" -> "SubqueryExpression"
+  "ParsedExpressionSubclasses" -> "SubqueryExpression"
+  "SelectStatement" -> "SubqueryExpression"
+
+  "Base" -> "CaseCheck"
+  "ParsedExpressionSubclasses" -> "CaseCheck"
+
+  "ParsedExpression" -> "CollateExpression"
+  "ParsedExpressionSubclasses" -> "CollateExpression"
+  
+  "ParsedExpression" -> "CaseExpression"
+  "CaseCheck" -> "CaseExpression"
+  "ParsedExpressionSubclasses" -> "CaseExpression"
+
+  "ParsedExpression" -> "BetweenExpression"
+  "ParsedExpressionSubclasses" -> "BetweenExpression"
+  
+    "ParsedExpression" -> "PositionalReferenceExpression"
+
+    "ParsedExpression" -> "ParameterExpression"
+
+    "ParsedExpression" -> "LambdaExpression"
+    "ParsedExpressionSubclasses" -> "LambdaExpression"
+
+    "FunctionExpression" -> "ParsedExpressionSubclasses"
+    "ColumnRefExpression" -> "ParsedExpressionSubclasses"
+    "StarExpression" -> "ParsedExpressionSubclasses"
+    "ConstantExpression" -> "ParsedExpressionSubclasses"
+    "CastExpression" -> "ParsedExpressionSubclasses"
+    "ComparisonExpression" -> "ParsedExpressionSubclasses"
+    "ConjunctionExpression" -> "ParsedExpressionSubclasses"
+    "LambdaExpression" -> "ParsedExpressionSubclasses"
+    "ParameterExpression" -> "ParsedExpressionSubclasses"
+    "PositionalReferenceExpression" -> "ParsedExpressionSubclasses"
+    "SubqueryExpression" -> "ParsedExpressionSubclasses"
+    "OperatorExpression" -> "ParsedExpressionSubclasses"
+    "CaseExpression" -> "ParsedExpressionSubclasses"
+    "CollateExpression" -> "ParsedExpressionSubclasses"
+    "BetweenExpression" -> "ParsedExpressionSubclasses"
+    "WindowExpression" -> "ParsedExpressionSubclasses"
+    "RootModel" -> "ParsedExpressionSubclasses"
 }
